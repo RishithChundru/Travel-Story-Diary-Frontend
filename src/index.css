@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: -apple-system, BlinkMacMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  color: #333;
+  background-color: #f4f7f6;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+html, body, #root {
+  height: 100%; 
+  margin: 0;
+  padding: 0; 
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; 
+}
+
+.login-ui-box {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background-color: #93c5fd;
+    border-radius: 9999px;
+    filter: blur(80px);
+    opacity: 0.3;
+    z-index: 0;
+    right: 40px;
+}
+
