@@ -33,6 +33,7 @@ const RegisterPage = () => {
         if (isSuccess) {
             toast.success('User successfully registered!');
             navigate('/login');
+            return;
         }
 
         dispatch(reset());
