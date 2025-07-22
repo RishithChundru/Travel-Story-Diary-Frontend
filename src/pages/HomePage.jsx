@@ -52,6 +52,13 @@ const HomePage = () => {
             }
 
             const fetchedStories = await storyService.getStories(searchQuery); 
+            if (!Array.isArray(fetchedStories)) {
+            console.error('API returned non-array data for stories:', fetchedStories);
+            setAllUserStories([]); 
+            setDisplayedStories([]);
+            toast.error('Received invalid story data from server.');
+            return;
+        }
             setAllUserStories(fetchedStories); 
         } catch (error) {
             console.error('Error fetching stories:', error);
@@ -61,6 +68,8 @@ const HomePage = () => {
             } else {
                 toast.error('Failed to load stories.');
             }
+            setAllUserStories([]);
+        setDisplayedStories([]);
         }
     }, [user, navigate, searchQuery]); 
 
