@@ -238,7 +238,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import travelStoryService from '../api/travelStoryService'; // Renamed import
+import travelStoryService from '../features/travelStories/travelStoryService'; // Renamed import
 import StoryCard from '../components/StoryCard';
 import AddEditStoryModal from '../components/AddEditStoryModal';
 import { useSelector, useDispatch } from 'react-redux';
