@@ -1,7 +1,6 @@
 import axios from 'axios';
 
-require("dotenv").config()
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = 'https://travel-story-diary-backend.onrender.com' || 'http://localhost:5000';
 
 // Register
 const register = async (userData) => {
