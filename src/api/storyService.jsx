@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = import.meta.env.REACT_APP_API_URL || 'http://localhost:5000/api';
-const API_URL = `${API_BASE_URL}/travelstories`;
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = `${API_BASE_URL}/api/travelstories`;
 
 const getAuthHeader = () => {
     const user = JSON.parse(localStorage.getItem('user'));
