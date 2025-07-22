@@ -4,11 +4,7 @@ import authService from '../../api/authService';
 const user = JSON.parse(localStorage.getItem('user'));
 
 const initialState = {
-    user: userFromLocalStorage ? { 
-      ...userFromLocalStorage, 
-      token: userFromLocalStorage.token || null, 
-      favorites: userFromLocalStorage.favorites || [] 
-  } : null,
+    user: user ? user : null,
     isError: false,
     isSuccess: false,
     isLoading: false,
