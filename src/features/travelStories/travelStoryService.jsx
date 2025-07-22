@@ -60,7 +60,7 @@
 import axios from 'axios';
 
 // Base URL for the backend (e.g., https://your-render-app.onrender.com)
-const BASE_API_URL = import.meta.env.VITE_APP_API_URL || 'http://localhost:5000';
+const BASE_API_URL = 'https://travel-story-diary-backend.onrender.com' || 'http://localhost:5000';
 const TRAVEL_STORIES_API_URL = `${BASE_API_URL}/api/travelstories`;
 
 // Create new travel story
