@@ -43,7 +43,7 @@ const HomePage = () => {
 
     const fetchStories = useCallback(async () => {
         try {
-            if (!user) {
+            if (!user || !user.token) {
                 setAllUserStories([]);
                 setDisplayedStories([]);
                 console.log("User not logged in, redirecting to login.");

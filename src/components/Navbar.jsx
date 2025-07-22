@@ -82,7 +82,9 @@ const Navbar = () => {
                     {user ? (
                         <ul className="flex space-x-4 items-center">
                             {/* Use the new displayName variable */}
-                            <li className="font-semibold">Hello,  Hello, {user.username ? user.username : (user.email ? user.email.split('@')[0] : 'User')}!
+                            {/* <li className="font-semibold">Hello, {user.username ? user.username : (user.email ? user.email.split('@')[0] : 'User')}! */}
+
+                            <li className="font-semibold">Hello, {user.username ? user.username : null}
 
                             </li>
                             <li>
