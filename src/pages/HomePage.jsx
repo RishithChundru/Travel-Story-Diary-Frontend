@@ -182,7 +182,7 @@ const HomePage = () => {
                     </button>
                 )}
             </div>
-
+            <div className="flex-1 overflow-y-auto pb-20">
             {displayedStories.length === 0 && !searchQuery && !showFavoritesOnly ? (
                 <p className="text-center text-gray-600">No stories yet. Start by adding one!</p>
             ) : displayedStories.length === 0 && (searchQuery || showFavoritesOnly) ? (
@@ -204,7 +204,7 @@ const HomePage = () => {
                     ))}
                 </div>
             )}
-
+            </div>
             {user && ( 
                 <button
                     className="fixed bottom-8 right-8 bg-orange-600 text-white rounded-full w-14 h-14 flex items-center justify-center text-3xl shadow-lg hover:bg-red-600 transition-colors"
