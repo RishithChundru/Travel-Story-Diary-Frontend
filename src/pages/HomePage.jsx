@@ -77,6 +77,7 @@ const HomePage = () => {
     useEffect(() => {
         if (!user) {
             navigate('/login'); 
+            return;
         } else {
             fetchStories();
         }

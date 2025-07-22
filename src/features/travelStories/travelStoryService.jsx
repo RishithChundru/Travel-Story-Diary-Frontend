@@ -111,7 +111,6 @@ const travelStoryService = {
     getTravelStories,
     updateTravelStory,
     deleteTravelStory,
-    // Assuming toggleFavorite is in storyService now, or add it here if needed.
 };
 
 export default travelStoryService;
