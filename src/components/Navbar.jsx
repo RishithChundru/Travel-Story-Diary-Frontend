@@ -70,7 +70,7 @@ const Navbar = () => {
     };
 
     // Determine the display name
-    const displayName = user?.username || (user?.email?.split('@')[0]) || 'Guest'; // Added optional chaining and a fallback
+    // const displayName = user?.username || (user?.email?.split('@')[0]) || 'Guest'; // Added optional chaining and a fallback
 
     return (
         <nav className="bg-orange-600 p-4 h-20 text-white shadow-md">
@@ -82,7 +82,9 @@ const Navbar = () => {
                     {user ? (
                         <ul className="flex space-x-4 items-center">
                             {/* Use the new displayName variable */}
-                            <li className="font-semibold">Hello, {displayName}!</li>
+                            <li className="font-semibold">Hello,  Hello, {user.username ? user.username : (user.email ? user.email.split('@')[0] : 'User')}!
+
+                            </li>
                             <li>
                                 <button
                                     onClick={onLogout}
