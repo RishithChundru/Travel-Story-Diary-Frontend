@@ -66,7 +66,14 @@ export const authSlice = createSlice({
     extraReducers: (builder) => {
         builder
             .addCase(register.fulfilled, (state, action) => {
-                state.user = action.payload; 
+                // state.user = action.payload; 
+                state.isLoading = false; 
+                state.isSuccess = true; 
+                state.user = {
+                    ...action.payload,
+                    token: action.payload.token || null,
+                    favorites: Array.isArray(action.payload.favorites) ? action.payload.favorites : [],
+                };
             })
             .addCase(register.rejected, (state, action) => {
                 state.isLoading = false;
