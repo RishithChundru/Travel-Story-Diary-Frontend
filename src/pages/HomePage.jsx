@@ -160,7 +160,8 @@ const HomePage = () => {
     };
 
     return (
-        <div className="home-page-container p-4 min-h-screen">
+        <div className="home-page-container p-4 min-h-screen relative">
+            <div className="overflow-auto">
             <h1 className="text-3xl text-black font-bold mb-6 text-center">Your Travel Stories</h1>
 
             <div className="mb-6 flex flex-col md:flex-row justify-center items-center gap-4">
@@ -204,6 +205,7 @@ const HomePage = () => {
                     ))}
                 </div>
             )}
+            </div>
 
             {user && ( 
                 <button
