@@ -18,45 +18,10 @@ const getAuthHeader = () => {
     }
 };
 
-// const getStories = async (searchQuery = '') => {
-//     const response = await axios.get(`${API_URL}?search=${searchQuery}`, getAuthHeader());
-//     return response.data;
-// };
-
 const getStories = async (searchQuery = '') => {
-    const user = JSON.parse(localStorage.getItem('user'));
-    const token = user?.token;
-
-    if (!token) {
-        // Handle case where no token is present (e.g., user not logged in)
-        // You might want to throw an error or return an empty array here.
-        // Given your HomePage handles !user, returning an empty array is safer for now.
-        console.warn("No authentication token found when trying to get stories.");
-        return [];
-    }
-
-    const config = {
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
-        params: {
-            search: searchQuery, // Pass search query as a URL parameter
-        },
-    };
-
-    try {
-        const response = await axios.get(`${API_URL}/api/travelstories`, config);
-        if (!Array.isArray(response.data)) {
-            console.error("Backend /api/travelstories did not return an array:", response.data);
-            return []; 
-        }
-        return response.data;
-    } catch (error) {
-        console.error('Error in storyService.getStories:', error.response?.data || error.message);
-        throw error;
-    }
+    const response = await axios.get(`${API_URL}?search=${searchQuery}`, getAuthHeader());
+    return response.data;
 };
-
 
 const addStory = async (storyData) => {
     const response = await axios.post(API_URL, storyData, getAuthHeader());
