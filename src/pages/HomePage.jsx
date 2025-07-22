@@ -33,7 +33,7 @@ const HomePage = () => {
             );
         }
 
-        if (showFavoritesOnly && user && user.favorites) {
+        if (showFavoritesOnly && user && Array.isArray(user.favorites)) {
             filtered = filtered.filter(story => user.favorites.includes(story._id));
         }
 
