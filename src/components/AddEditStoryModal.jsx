@@ -150,7 +150,7 @@ const AddEditStoryModal = ({ onClose, onSubmit, title, initialData }) => {
                         </button>
                         <button
                             type="submit"
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-orange-500 hover:bg-orange-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         >
                             {initialData ? 'Update Story' : 'Add Story'}
                         </button>
