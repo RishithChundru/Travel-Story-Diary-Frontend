@@ -32,7 +32,7 @@ const RegisterPage = () => {
 
         if (isSuccess) {
             toast.success('User successfully registered!');
-            navigate('/login');
+            navigate('/');
             return;
         }
 
